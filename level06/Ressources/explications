@@ -1,0 +1,5 @@
+On voit un script php et un binaire. On se rend compte que le binaire ne fait que qu'executer le script php en tant que flag06.
+
+on se rend compte que le script php utilise le flag e dans une regex. Ce flag sert a interpreter la chaine substituée comme du code php.
+En mettant ce code ci : [x {${shell_exec(getflag)}}], on va executer {${shell_exec(getflag)}}, qui va executer shell_exec(getflag), qui va nous donner le flag.
+(En realite, ca va chercher la variable avec comme nom le resultat de shell_exec(getflag));)
